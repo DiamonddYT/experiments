@@ -43,9 +43,15 @@ var TrackMaker = (function(){
         mapImgs = {};
         
         Promise.all([
-            loadImg('resources/Terralockla_Map.jpg'),
+            loadImg('resources/ne.jpg'),
+            loadImg('resources/nw.jpg'),
+            loadImg('resources/se.jpg'),
+            loadImg('resources/sw.jpg')
         ]).then(imgs=>{
-            mapImgs.map = imgs[0];
+            mapImgs.ne = imgs[0];
+            mapImgs.nw = imgs[1];
+            mapImgs.se = imgs[2];
+            mapImgs.sw = imgs[3];
             loadedMapImg = true;
         });
     };
